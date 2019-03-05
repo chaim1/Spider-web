@@ -22,7 +22,11 @@ app.use(express.json());
 
 
 app.post('/AddFile',upload.any(), (req, res) => {
-    console.log(req);
+    var data = fs.readFileSync('files/'+req.files[0].filename, 'utf8');
+    data = data.toString(); 
+    console.log(data);
+    
+    
     res.end('ok');
 });
 
