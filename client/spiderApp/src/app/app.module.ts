@@ -10,13 +10,15 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { AddFileComponent } from './add-file/add-file.component';
+import { SearchWordComponent } from './search-word/search-word.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     HeaderComponent,
-    AddFileComponent
+    AddFileComponent,
+    SearchWordComponent
   ],
   imports: [
     BrowserModule,

@@ -12,6 +12,6 @@ export class FilesService {
   constructor(private httpClient: HttpClient) { }
 
   postFile(file): Observable<any> {
-    return this.httpClient.post<any>(environment.link+'AddFile', file)
+    return this.httpClient.post<any>(environment.link+'results', file)
   }
 }
