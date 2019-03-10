@@ -9,7 +9,7 @@ import { SearchWordService } from '../service/search-word.service';
   styleUrls: ['./search-word.component.css']
 })
 export class SearchWordComponent implements OnInit {
- word: string;
+ words: Object;
 
   @ViewChild('f') signupForm: NgForm;
 
@@ -21,8 +21,7 @@ export class SearchWordComponent implements OnInit {
 
   onSubmit(){
     return this.searchWordService.getWordDb(this.signupForm.value.wordSearch).subscribe(res => {
-      this.word = res;
-      console.log(this.word);
+      this.words = res;
     });
   }
 }

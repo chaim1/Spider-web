@@ -8,3 +8,10 @@
     <button type="submit" class="btn btn-primary col-md-4 ">Submit</button>
   </div>
 </form>
+
+<br>
+<div>
+  <app-word-item
+  *ngFor="let word of words"
+  [words]="word"></app-word-item>
+</div>

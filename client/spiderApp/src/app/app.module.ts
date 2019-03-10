@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { AddFileComponent } from './add-file/add-file.component';
 import { SearchWordComponent } from './search-word/search-word.component';
+import { WordItemComponent } from './search-word/word-item/word-item.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SearchWordComponent } from './search-word/search-word.component';
     HomeComponent,
     HeaderComponent,
     AddFileComponent,
-    SearchWordComponent
+    SearchWordComponent,
+    WordItemComponent,
   ],
   imports: [
     BrowserModule,
