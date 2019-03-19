@@ -19,7 +19,8 @@
 * Press Add file  
 * For test take the text.txt file in this rpository and choise 
 * Press Search word and search words
-* If you want to insert file in english go to `server/filteringWoeds.js` and on line 13 replace `file = file.replace(/[^א-ת ]/g, '');` with `file = file.replace(/[^a-z ][^A-Z ]/g, '');`
+* If you want to insert file in english go to `server/filteringWoeds.js` and on line 13 replace `file = file.replace(/[^א-ת ]/g, '');` with `file = file.replace(/[^a-z ][^A-Z ]/g, '');`.
+
 
 
 
