@@ -10,7 +10,7 @@ function filtering(file, res) {
     file = file.replace(/[=]/g, ' ');
     file = file.replace(/[!]/g, ' ');
     file = file.replace(/[?]/g, ' ');
-    file = file.replace(/[^א-ת ]/g, ' ');
+    file = file.replace(/[^א-ת ]/g, '');
     var wordArray = [];
     var newarray = [];
     wordArray = file.split(' ');
@@ -19,7 +19,11 @@ function filtering(file, res) {
             newarray.push(wordArray[i])
         }
     }
-    console.log(newarray.length);
+    // console.log(wordArray);
+    // console.log("===============================================================================");
+    // console.log(newarray);
+    
+    // console.log(newarray.length);
     
     var a = resultKeyVal(newarray);
     res(a);

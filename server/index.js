@@ -28,6 +28,7 @@ app.post('/results', upload.any(), (req, res) => {
     var data = fs.readFileSync('files/' + req.files[0].filename, 'utf8');
     filreringWord(data.toString(), result => {
         Word.insertMany(result,res).then(() => {
+            console.log('insert to database');
             res.status(201).send(result)
         }).catch((a) => {
             res.status(400).send(a)
@@ -38,8 +39,8 @@ app.post('/results', upload.any(), (req, res) => {
 app.get('/results:name', (req, res) => {
     var word = req.params.name;
     console.log(word);
-    Word.find({word1:word}).then((word) => {
-        console.log('hjgkjhgjhg');
+    Word.find({word1:word}).sort({sum: -1}).then((word) => {
+        console.log('finish');
         
         console.log(word);
         res.status(200).send(word)
