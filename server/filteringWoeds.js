@@ -1,16 +1,16 @@
 function filtering(file, res) {
-    // file = file.replace(/["]/g, '');
-    // file = file.replace(/[']/g, '');
-    // file = file.replace(/[.]/g, ' ');
-    // file = file.replace(/[,]/g, ' ');
-    // file = file.replace(/[;]/g, ' ');
-    // file = file.replace(/[:]/g, ' ');
-    // file = file.replace(/[־]/g, ' ');
-    // file = file.replace(/[-]/g, ' ');
-    // file = file.replace(/[=]/g, ' ');
-    // file = file.replace(/[!]/g, ' ');
-    // file = file.replace(/[?]/g, ' ');
-    file = file.replace(/[^a-z ][^A-Z ]/g, ' ');
+    file = file.replace(/["]/g, '');
+    file = file.replace(/[']/g, '');
+    file = file.replace(/[.]/g, ' ');
+    file = file.replace(/[,]/g, ' ');
+    file = file.replace(/[;]/g, ' ');
+    file = file.replace(/[:]/g, ' ');
+    file = file.replace(/[־]/g, ' ');
+    file = file.replace(/[-]/g, ' ');
+    file = file.replace(/[=]/g, ' ');
+    file = file.replace(/[!]/g, ' ');
+    file = file.replace(/[?]/g, ' ');
+    file = file.replace(/[^א-ת ]/g, ' ');
     var wordArray = [];
     var newarray = [];
     wordArray = file.split(' ');
@@ -19,6 +19,8 @@ function filtering(file, res) {
             newarray.push(wordArray[i])
         }
     }
+    console.log(newarray.length);
+    
     var a = resultKeyVal(newarray);
     res(a);
 }
@@ -29,6 +31,8 @@ function resultKeyVal(newarray) {
             words.push(newarray[i]);
         }
     }
+    console.log(2);
+    
     var arr = [];
     for (let j = 0; j < words.length; j++) {
         var w = { name: words[j], word: [] };
@@ -39,6 +43,8 @@ function resultKeyVal(newarray) {
         }
         arr.push(w);
     }
+    console.log(3);
+    
     return filterSum(arr);
 }
 function filterSum(arr) {
@@ -55,7 +61,11 @@ function filterSum(arr) {
                 trash.push(arr[i].word[j]);
             }
         }
+        console.log(5);
+        
     }
+    console.log(6);
+    
     return result;
 }
 

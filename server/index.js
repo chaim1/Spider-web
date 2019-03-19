@@ -12,7 +12,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const PORT = 8888;
+const PORT = 1123;
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
         cb(null, 'files/')
@@ -38,13 +38,18 @@ app.post('/results', upload.any(), (req, res) => {
 app.get('/results:name', (req, res) => {
     var word = req.params.name;
     console.log(word);
-    Word.find({ word1: word }).then((word) => {
+    Word.find({word1:word}).then((word) => {
+        console.log('hjgkjhgjhg');
+        
         console.log(word);
         res.status(200).send(word)
     }).catch((e) => {
+        console.log(e);
+        
         res.status(500).send()
     })
 })
+
 
 app.listen(PORT, function () {
     console.log('server started at port ' + PORT)
