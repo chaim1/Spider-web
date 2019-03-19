@@ -10,7 +10,7 @@
 * In your project on Security tab press IP Whitelist and then press ADD IP ADDRESS and insert ip (your IP) 
 * In your project on Overview tab press connect and then press Connect Your Aplication and then copy the limk from Conection String Only 
 ![conect](https://user-images.githubusercontent.com/39926105/54633181-5430c200-4a88-11e9-8efe-66a3be540f2b.jpg)
-* Open `server/db/mongoose.js` and replace the limk in mongoose.connect function with your limk
+* Open `server/db/mongoose.js` and replace the link in mongoose.connect function with your link
 * and replace the `<password>` with your password 
 ### Spider-web again
 * Naviget to client `cd client/spiderApp` and run ng serve
