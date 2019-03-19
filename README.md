@@ -5,7 +5,7 @@
 * Naviget to server `cd server`
 * Run `npm install`
 ## MongoDb
-* Create mongoDb database [a relative link](https://www.mongodb.com)
+* Create mongoDb database [mongodb](https://www.mongodb.com)
 * On Security tab press MongoDB Users and then press ADD NEW USER and save the password
 * On Security tab press IP Whitelist and then press ADD IP ADDRESS and insert ip (your IP) 
 * On Overview tab press connect and then press Connect Your Aplication and then copy the limk from Conection String Only 
