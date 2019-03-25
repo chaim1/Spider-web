@@ -1,8 +1,8 @@
 # Spider-web
 * Download this rpository `git clone https://github.com/chaim1/Spider-web.git`
-* Naviget to client `cd client/spiderApp`
+* Navigate to client `cd client/spiderApp`
 * Run `npm install`
-* Naviget to server `cd server`
+* Navigate to server `cd server`
 * Run `npm install`
 ## MongoDb
 * Create mongoDb new Create Cluster [mongodb](https://www.mongodb.com)
@@ -13,8 +13,8 @@
 * Open `server/db/mongoose.js` and replace the link in mongoose.connect function with your link
 * and replace the `<password>` with your password 
 ### Spider-web again
-* Naviget to client `cd client/spiderApp` and run ng serve
-* Naviget to server `cd server` and run npm start
+* Navigate to client `cd client/spiderApp` and run ng serve
+* Navigate to server `cd server` and run npm start
 * Go to the browser on `localhost:4200`
 * Press Add file  
 * For test take the text.txt file in this rpository and choise 
